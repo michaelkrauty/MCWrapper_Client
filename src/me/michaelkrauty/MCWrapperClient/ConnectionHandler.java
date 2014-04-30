@@ -29,7 +29,7 @@ public class ConnectionHandler implements Runnable {
 			String fromServer, fromUser;
 
 			while ((fromServer = in.readLine()) != null) {
-				System.out.println("Server: " + fromServer);
+				System.out.println("MCWrapper: " + fromServer);
 				if (fromServer.equalsIgnoreCase("disconnect")) {
 					System.out.println("Closing socket...");
 					socket.close();
