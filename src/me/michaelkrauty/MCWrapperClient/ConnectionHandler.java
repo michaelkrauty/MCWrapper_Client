@@ -53,14 +53,13 @@ public class ConnectionHandler implements Runnable {
 			System.err.println("IOException connecting to " + hostName);
 			System.exit(1);
 		}
+		System.exit(0);
 	}
 
 	public void start() {
-		System.out.println("Starting Connection Handler");
 		if (t == null) {
 			t = new Thread(this);
 			t.start();
 		}
 	}
-
 }
