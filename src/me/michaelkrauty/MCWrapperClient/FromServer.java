@@ -37,8 +37,7 @@ public class FromServer implements Runnable {
 					break;
 				}
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
+		} catch (IOException ignored) {
 		}
 	}
 }

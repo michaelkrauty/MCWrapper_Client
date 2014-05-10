@@ -30,8 +30,7 @@ public class ToServer {
 					System.out.println("Disconnected.");
 				}
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
+		} catch (IOException ignored) {
 		}
 	}
 }
