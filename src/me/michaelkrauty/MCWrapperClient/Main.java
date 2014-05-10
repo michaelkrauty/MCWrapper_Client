@@ -10,9 +10,7 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 
-		connectionHandler.start();
-
-		new ManageServer();
+		// new ManageServer();
 
 		while (running) {
 		}

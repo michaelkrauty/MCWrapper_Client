@@ -4,15 +4,9 @@ import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-public class ConnectionHandler implements Runnable {
-	private Thread t;
+public class ConnectionHandler {
 
 	public ConnectionHandler() {
-
-	}
-
-	@Override
-	public void run() {
 		String hostName = "dominationvps.com";
 		int portNumber = 3307;
 
@@ -27,12 +21,5 @@ public class ConnectionHandler implements Runnable {
 			System.exit(1);
 		}
 		System.exit(0);
-	}
-
-	public void start() {
-		if (t == null) {
-			t = new Thread(this);
-			t.start();
-		}
 	}
 }
