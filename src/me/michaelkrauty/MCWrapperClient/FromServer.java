@@ -7,10 +7,18 @@ import java.net.Socket;
 
 public class FromServer implements Runnable {
 
+	private Thread t;
 	private final Socket socket;
 
 	public FromServer(Socket soc) {
 		socket = soc;
+	}
+
+	public void start() {
+		if (t == null) {
+			t = new Thread(this);
+			t.start();
+		}
 	}
 
 	@Override

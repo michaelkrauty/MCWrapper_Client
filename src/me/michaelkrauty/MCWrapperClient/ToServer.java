@@ -12,7 +12,7 @@ public class ToServer {
 
 	public ToServer(Socket socket) {
 
-		new FromServer(socket);
+		new FromServer(socket).start();
 
 		try {
 			BufferedReader stdIn = new BufferedReader(new InputStreamReader(
