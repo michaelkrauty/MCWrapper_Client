@@ -28,6 +28,7 @@ public class ToServer {
 					System.out.println("Closing socket...");
 					socket.close();
 					System.out.println("Disconnected.");
+					break;
 				}
 			}
 		} catch (IOException ignored) {
