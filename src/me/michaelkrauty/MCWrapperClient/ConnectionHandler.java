@@ -36,13 +36,15 @@ public class ConnectionHandler implements Runnable {
 					System.out.println("Server closed connection.");
 				}
 
-				fromUser = stdIn.readLine();
-				if (fromUser != null) {
-					out.println(fromUser);
-					if (fromUser.equalsIgnoreCase("disconnect")) {
-						System.out.println("Closing socket...");
-						socket.close();
-						System.out.println("Disconnected.");
+				if (stdIn.readLine() != null) {
+					fromUser = stdIn.readLine();
+					if (fromUser != null) {
+						out.println(fromUser);
+						if (fromUser.equalsIgnoreCase("disconnect")) {
+							System.out.println("Closing socket...");
+							socket.close();
+							System.out.println("Disconnected.");
+						}
 					}
 				}
 			}
